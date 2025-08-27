@@ -13,6 +13,6 @@ local games = {
 }
 
 
-if game.PlaceId == 13379208636 or game.PlaceId == 14916516914 or game.PlaceId == 13379349730 or game.PlaceId == 129827112113663 or game.PlaceId == 16044264830 or game.PlaceId == 112279762578792 or game.PlaceId == 81440632616906then
+if game.PlaceId == 13379208636 or game.PlaceId == 14916516914 or game.PlaceId == 13379349730 or game.PlaceId == 129827112113663 or game.PlaceId == 16044264830 or game.PlaceId == 112279762578792 or game.PlaceId == 81440632616906 then
 	loadstring(game:HttpGet(games[game.PlaceId]))()
 end
