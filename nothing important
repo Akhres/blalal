@@ -9,9 +9,10 @@ local games = {
 	[129827112113663] =  'https://raw.githubusercontent.com/Mordraxthegreat/DAT-Hub/refs/heads/main/Prospecting', -- PPT
 	[16044264830] = 'https://raw.githubusercontent.com/Mordraxthegreat/DAT-Hub/refs/heads/main/BB', -- BB
 	[112279762578792] = 'https://raw.githubusercontent.com/Mordraxthegreat/DAT-Hub/refs/heads/main/Mine', -- MN
+	[81440632616906] = 'https://raw.githubusercontent.com/Mordraxthegreat/DAT-Hub/refs/heads/main/Dig%20to%20Earth%20core' -- DTEc
 }
 
 
-if game.PlaceId == 13379208636 or game.PlaceId == 14916516914 or game.PlaceId == 13379349730 or game.PlaceId == 129827112113663 or game.PlaceId == 16044264830 or game.PlaceId == 112279762578792 then
+if game.PlaceId == 13379208636 or game.PlaceId == 14916516914 or game.PlaceId == 13379349730 or game.PlaceId == 129827112113663 or game.PlaceId == 16044264830 or game.PlaceId == 112279762578792 or game.PlaceId == 81440632616906then
 	loadstring(game:HttpGet(games[game.PlaceId]))()
 end
