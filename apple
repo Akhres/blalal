@@ -65,7 +65,7 @@ do
 
 	Frame_1.Parent = ScreenGui
 	Frame_1.BackgroundColor3 = Color3.fromRGB(0,0,0)
-	Frame_1.BackgroundTransparency = 0.20000000298023224
+	Frame_1.BackgroundTransparency = 0.2
 	Frame_1.BorderColor3 = Color3.fromRGB(0,0,0)
 	Frame_1.BorderSizePixel = 0
 	Frame_1.Size = UDim2.new(1, 0,1, 0)
@@ -307,27 +307,51 @@ do
 	TextLabel_3.Text = fmW(Fragment.Value)
 	
 	Beli:GetPropertyChangedSignal('Value'):Connect(function()
-		TextLabel_2 = fmW(Beli.Value)
+		TextLabel_2.Text = fmW(Beli.Value)
 	end)
 	
 	Fragment:GetPropertyChangedSignal('Value'):Connect(function()
-		TextLabel_3 = fmW(Fragment.Value)
+		TextLabel_3.Text = fmW(Fragment.Value)
 	end)
 	
 	local Click = click(Frame_2)
+	local fa = true
 	
 	tw({v = Frame_3, t = 0.25, s = Enum.EasingStyle.Back, d = "Out", g = {Position = UDim2.fromScale(1, 0.5), AnchorPoint = Vector2.new(1, 0.5)}}):Play()
 	
 	Click.MouseButton1Click:Connect(function()
-		Frame_1.Visible = not Frame_1.Visible
-		Blur.Enabled = Frame_1.Visible
-		
-		if Frame_1.Visible then
+		if fa then
 			tw({v = Frame_3, t = 0.25, s = Enum.EasingStyle.Back, d = "Out", g = {Position = UDim2.fromScale(1, 0.5), AnchorPoint = Vector2.new(1, 0.5)}}):Play()
+			tw({v = Frame_1, t = 0.25, s = Enum.EasingStyle.Exponential, d = "Out", g = {BackgroundTransparency = 0.2}}):Play()
+			tw({v = Blur, t = 0.25, s = Enum.EasingStyle.Exponential, d = "Out", g = {Size = 24}}):Play()
 			UIGradient_2.Enabled = true	
+			for i, v in pairs(Frame_1:GetDescendants()) do
+				if v:IsA('ImageLabel') then
+					tw({v = v, t = 0.25, s = Enum.EasingStyle.Exponential, d = "Out", g = {ImageTransparency = 0}}):Play()
+				end
+				if v:IsA('TextLabel') then
+					tw({v = v, t = 0.25, s = Enum.EasingStyle.Exponential, d = "Out", g = {TextTransparency = 0}}):Play()
+				end
+			end
+			tw({v = Time_1, t = 0.25, s = Enum.EasingStyle.Exponential, d = "Out", g = {TextTransparency = 0.4}}):Play()
+			tw({v = UIStroke_2, t = 0.25, s = Enum.EasingStyle.Exponential, d = "Out", g = {Transparency = 0}}):Play()
+			tw({v = UIStroke_3, t = 0.25, s = Enum.EasingStyle.Exponential, d = "Out", g = {Transparency = 0}}):Play()
 		else
 			tw({v = Frame_3, t = 0.25, s = Enum.EasingStyle.Back, d = "Out", g = {Position = UDim2.fromScale(0, 0.5), AnchorPoint = Vector2.new(0, 0.5)}}):Play()
+			tw({v = Frame_1, t = 0.25, s = Enum.EasingStyle.Exponential, d = "Out", g = {BackgroundTransparency = 1}}):Play()
+			tw({v = Blur, t = 0.25, s = Enum.EasingStyle.Exponential, d = "Out", g = {Size = 0}}):Play()
 			UIGradient_2.Enabled = false
+			for i, v in pairs(Frame_1:GetDescendants()) do
+				if v:IsA('ImageLabel') then
+					tw({v = v, t = 0.25, s = Enum.EasingStyle.Exponential, d = "Out", g = {ImageTransparency = 1}}):Play()
+				end
+				if v:IsA('TextLabel') then
+					tw({v = v, t = 0.25, s = Enum.EasingStyle.Exponential, d = "Out", g = {TextTransparency = 1}}):Play()
+				end
+			end
+			tw({v = UIStroke_2, t = 0.25, s = Enum.EasingStyle.Exponential, d = "Out", g = {Transparency = 1}}):Play()
+			tw({v = UIStroke_3, t = 0.25, s = Enum.EasingStyle.Exponential, d = "Out", g = {Transparency = 1}}):Play()
 		end
+		fa = not fa
 	end)
 end
