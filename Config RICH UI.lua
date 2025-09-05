@@ -1,0 +1,333 @@
+do
+	Players 			= 	game:GetService("Players")
+	Player 				= 	Players.LocalPlayer
+	PlayerGui 			= 	Player:FindFirstChild("PlayerGui")
+	CoreGui 			= 	game:GetService("CoreGui")
+	RunService 			= 	game:GetService("RunService")
+	TweenService 		= 	game:GetService("TweenService")
+	
+	local function click(p)
+		local Click = Instance.new("TextButton")
+
+		Click.Name = "Click"
+		Click.Parent = p
+		Click.AnchorPoint = Vector2.new(0.5, 0.5)
+		Click.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Click.BackgroundTransparency = 1.000
+		Click.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		Click.BorderSizePixel = 0
+		Click.Size = UDim2.new(1, 0, 1, 0)
+		Click.Font = Enum.Font.SourceSans
+		Click.Text = ""
+		Click.TextColor3 = Color3.fromRGB(0, 0, 0)
+		Click.TextSize = 14.000
+		Click.Position = UDim2.new(0.5, 0, 0.5, 0)
+		Click.ZIndex = 99999
+
+		return Click
+	end
+	local function tw(info)
+		return TweenService:Create(info.v,TweenInfo.new(info.t, info.s, Enum.EasingDirection[info.d]),info.g)
+	end
+	
+	local ScreenGui = Instance.new("ScreenGui")
+	local Frame_1 = Instance.new("Frame")
+	local ImageLabel_1 = Instance.new("ImageLabel")
+	local ImageLabel_2 = Instance.new("ImageLabel")
+	local TextLabel_1 = Instance.new("TextLabel")
+	local Time_1 = Instance.new("TextLabel")
+	local Toggle_1 = Instance.new("Frame")
+	local UIListLayout_1 = Instance.new("UIListLayout")
+	local ImageLabel_3 = Instance.new("ImageLabel")
+	local Frame_2 = Instance.new("Frame")
+	local UICorner_1 = Instance.new("UICorner")
+	local UIGradient_1 = Instance.new("UIGradient")
+	local UIStroke_1 = Instance.new("UIStroke")
+	local Frame_3 = Instance.new("Frame")
+	local UICorner_2 = Instance.new("UICorner")
+	local UIGradient_2 = Instance.new("UIGradient")
+	local UIPadding_1 = Instance.new("UIPadding")
+	local Frame_4 = Instance.new("Frame")
+	local Beli_1 = Instance.new("Frame")
+	local UIListLayout_2 = Instance.new("UIListLayout")
+	local ImageLabel_4 = Instance.new("ImageLabel")
+	local TextLabel_2 = Instance.new("TextLabel")
+	local UIStroke_2 = Instance.new("UIStroke")
+	local UIListLayout_3 = Instance.new("UIListLayout")
+	local Fragment_1 = Instance.new("Frame")
+	local UIListLayout_4 = Instance.new("UIListLayout")
+	local ImageLabel_5 = Instance.new("ImageLabel")
+	local TextLabel_3 = Instance.new("TextLabel")
+	local UIStroke_3 = Instance.new("UIStroke")
+
+	ScreenGui.Parent = RunService:IsStudio() and PlayerGui or CoreGui
+	ScreenGui.IgnoreGuiInset = true
+
+	Frame_1.Parent = ScreenGui
+	Frame_1.BackgroundColor3 = Color3.fromRGB(0,0,0)
+	Frame_1.BackgroundTransparency = 0.20000000298023224
+	Frame_1.BorderColor3 = Color3.fromRGB(0,0,0)
+	Frame_1.BorderSizePixel = 0
+	Frame_1.Size = UDim2.new(1, 0,1, 0)
+
+	ImageLabel_1.Parent = Frame_1
+	ImageLabel_1.AnchorPoint = Vector2.new(0.5, 0.5)
+	ImageLabel_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
+	ImageLabel_1.BackgroundTransparency = 1
+	ImageLabel_1.BorderColor3 = Color3.fromRGB(0,0,0)
+	ImageLabel_1.BorderSizePixel = 0
+	ImageLabel_1.Position = UDim2.new(0.5, 0,0.5, 0)
+	ImageLabel_1.Size = UDim2.new(0, 300,0, 300)
+	ImageLabel_1.Image = "rbxassetid://134995755772326"
+
+	ImageLabel_2.Parent = Frame_1
+	ImageLabel_2.AnchorPoint = Vector2.new(0.5, 0)
+	ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255,255,255)
+	ImageLabel_2.BackgroundTransparency = 1
+	ImageLabel_2.BorderColor3 = Color3.fromRGB(0,0,0)
+	ImageLabel_2.BorderSizePixel = 0
+	ImageLabel_2.Position = UDim2.new(0.5, 0,0, 0)
+	ImageLabel_2.Size = UDim2.new(0, 100,0, 100)
+	ImageLabel_2.Image = "rbxassetid://134995755772326"
+
+	TextLabel_1.Parent = Frame_1
+	TextLabel_1.AnchorPoint = Vector2.new(0.5, 0)
+	TextLabel_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
+	TextLabel_1.BackgroundTransparency = 1
+	TextLabel_1.BorderColor3 = Color3.fromRGB(0,0,0)
+	TextLabel_1.BorderSizePixel = 0
+	TextLabel_1.Position = UDim2.new(0.5, 0,0, 0)
+	TextLabel_1.Size = UDim2.new(0, 100,0, 80)
+	TextLabel_1.Font = Enum.Font.GothamBold
+	TextLabel_1.RichText = true
+	TextLabel_1.Text = "The Best <font color='#b52821'>RICH</font> Method"
+	TextLabel_1.TextColor3 = Color3.fromRGB(255,255,255)
+	TextLabel_1.TextSize = 18
+	TextLabel_1.TextYAlignment = Enum.TextYAlignment.Bottom
+
+	Time_1.Name = "Time"
+	Time_1.Parent = Frame_1
+	Time_1.AnchorPoint = Vector2.new(0.5, 0)
+	Time_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
+	Time_1.BackgroundTransparency = 1
+	Time_1.BorderColor3 = Color3.fromRGB(0,0,0)
+	Time_1.BorderSizePixel = 0
+	Time_1.Position = UDim2.new(0.5, 0,0, 0)
+	Time_1.Size = UDim2.new(0, 100,0, 100)
+	Time_1.Font = Enum.Font.GothamBold
+	Time_1.RichText = true
+	Time_1.Text = "00:00:00"
+	Time_1.TextColor3 = Color3.fromRGB(255,255,255)
+	Time_1.TextSize = 16
+	Time_1.TextTransparency = 0.4000000059604645
+	Time_1.TextYAlignment = Enum.TextYAlignment.Bottom
+
+	Toggle_1.Name = "Toggle"
+	Toggle_1.Parent = ScreenGui
+	Toggle_1.AnchorPoint = Vector2.new(1, 0)
+	Toggle_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
+	Toggle_1.BackgroundTransparency = 1
+	Toggle_1.BorderColor3 = Color3.fromRGB(0,0,0)
+	Toggle_1.BorderSizePixel = 0
+	Toggle_1.Position = UDim2.new(1, -10,0, 10)
+	Toggle_1.Size = UDim2.new(0, 100,0, 100)
+
+	UIListLayout_1.Parent = Toggle_1
+	UIListLayout_1.HorizontalAlignment = Enum.HorizontalAlignment.Center
+	UIListLayout_1.SortOrder = Enum.SortOrder.LayoutOrder
+	UIListLayout_1.VerticalAlignment = Enum.VerticalAlignment.Center
+
+	ImageLabel_3.Parent = Toggle_1
+	ImageLabel_3.AnchorPoint = Vector2.new(0.5, 0)
+	ImageLabel_3.BackgroundColor3 = Color3.fromRGB(255,255,255)
+	ImageLabel_3.BackgroundTransparency = 1
+	ImageLabel_3.BorderColor3 = Color3.fromRGB(0,0,0)
+	ImageLabel_3.BorderSizePixel = 0
+	ImageLabel_3.Position = UDim2.new(0.5, 0,0, 0)
+	ImageLabel_3.Size = UDim2.new(0, 80,0, 40)
+	ImageLabel_3.Image = "rbxassetid://134995755772326"
+	ImageLabel_3.ScaleType = Enum.ScaleType.Crop
+
+	Frame_2.Parent = Toggle_1
+	Frame_2.BackgroundColor3 = Color3.fromRGB(255,255,255)
+	Frame_2.BorderColor3 = Color3.fromRGB(0,0,0)
+	Frame_2.BorderSizePixel = 0
+	Frame_2.LayoutOrder = 1
+	Frame_2.Size = UDim2.new(0, 60,0, 30)
+
+	UICorner_1.Parent = Frame_2
+	UICorner_1.CornerRadius = UDim.new(1,0)
+
+	UIGradient_1.Parent = Frame_2
+	UIGradient_1.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(143, 143, 143)), ColorSequenceKeypoint.new(1, Color3.fromRGB(99, 99, 99))}
+
+	UIStroke_1.Parent = Frame_2
+	UIStroke_1.Color = Color3.fromRGB(187,187,187)
+	UIStroke_1.Thickness = 1
+
+	Frame_3.Parent = Frame_2
+	Frame_3.AnchorPoint = Vector2.new(0, 0.5)
+	Frame_3.BackgroundColor3 = Color3.fromRGB(255,255,255)
+	Frame_3.BorderColor3 = Color3.fromRGB(0,0,0)
+	Frame_3.BorderSizePixel = 0
+	Frame_3.Position = UDim2.new(0, 0,0.5, 0)
+	Frame_3.Size = UDim2.new(0, 25,0, 25)
+
+	UICorner_2.Parent = Frame_3
+	UICorner_2.CornerRadius = UDim.new(1,0)
+
+	UIGradient_2.Parent = Frame_3
+	UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(182, 41, 34)), ColorSequenceKeypoint.new(1, Color3.fromRGB(137, 47, 47))}
+
+	UIPadding_1.Parent = Frame_2
+	UIPadding_1.PaddingLeft = UDim.new(0,3)
+	UIPadding_1.PaddingRight = UDim.new(0,3)
+
+	Frame_4.Parent = Frame_1
+	Frame_4.AnchorPoint = Vector2.new(0.5, 1)
+	Frame_4.BackgroundColor3 = Color3.fromRGB(255,255,255)
+	Frame_4.BackgroundTransparency = 1
+	Frame_4.BorderColor3 = Color3.fromRGB(0,0,0)
+	Frame_4.BorderSizePixel = 0
+	Frame_4.Position = UDim2.new(0.5, 0,1, 0)
+	Frame_4.Size = UDim2.new(0, 100,0, 120)
+
+	Beli_1.Name = "Beli"
+	Beli_1.Parent = Frame_4
+	Beli_1.AutomaticSize = Enum.AutomaticSize.X
+	Beli_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
+	Beli_1.BackgroundTransparency = 1
+	Beli_1.BorderColor3 = Color3.fromRGB(0,0,0)
+	Beli_1.BorderSizePixel = 0
+	Beli_1.Size = UDim2.new(0, 0,0, 20)
+
+	UIListLayout_2.Parent = Beli_1
+	UIListLayout_2.Padding = UDim.new(0,3)
+	UIListLayout_2.FillDirection = Enum.FillDirection.Horizontal
+	UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+	UIListLayout_2.VerticalAlignment = Enum.VerticalAlignment.Center
+
+	ImageLabel_4.Parent = Beli_1
+	ImageLabel_4.BackgroundColor3 = Color3.fromRGB(255,255,255)
+	ImageLabel_4.BackgroundTransparency = 1
+	ImageLabel_4.BorderColor3 = Color3.fromRGB(0,0,0)
+	ImageLabel_4.BorderSizePixel = 0
+	ImageLabel_4.Size = UDim2.new(0, 20,0, 20)
+	ImageLabel_4.Image = "rbxassetid://78847260649735"
+	ImageLabel_4.ScaleType = Enum.ScaleType.Fit
+
+	TextLabel_2.Parent = Beli_1
+	TextLabel_2.AutomaticSize = Enum.AutomaticSize.XY
+	TextLabel_2.BackgroundColor3 = Color3.fromRGB(255,255,255)
+	TextLabel_2.BackgroundTransparency = 1
+	TextLabel_2.BorderColor3 = Color3.fromRGB(0,0,0)
+	TextLabel_2.BorderSizePixel = 0
+	TextLabel_2.Size = UDim2.new(0, 0,0, 0)
+	TextLabel_2.Font = Enum.Font.GothamBold
+	TextLabel_2.Text = "N/A"
+	TextLabel_2.TextColor3 = Color3.fromRGB(97,217,55)
+	TextLabel_2.TextSize = 16
+	TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
+
+	UIStroke_2.Parent = TextLabel_2
+	UIStroke_2.Thickness = 1
+
+	UIListLayout_3.Parent = Frame_4
+	UIListLayout_3.HorizontalAlignment = Enum.HorizontalAlignment.Center
+	UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+
+	Fragment_1.Name = "Fragment"
+	Fragment_1.Parent = Frame_4
+	Fragment_1.AutomaticSize = Enum.AutomaticSize.X
+	Fragment_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
+	Fragment_1.BackgroundTransparency = 1
+	Fragment_1.BorderColor3 = Color3.fromRGB(0,0,0)
+	Fragment_1.BorderSizePixel = 0
+	Fragment_1.LayoutOrder = 1
+	Fragment_1.Size = UDim2.new(0, 0,0, 20)
+
+	UIListLayout_4.Parent = Fragment_1
+	UIListLayout_4.Padding = UDim.new(0,3)
+	UIListLayout_4.FillDirection = Enum.FillDirection.Horizontal
+	UIListLayout_4.SortOrder = Enum.SortOrder.LayoutOrder
+	UIListLayout_4.VerticalAlignment = Enum.VerticalAlignment.Center
+
+	ImageLabel_5.Parent = Fragment_1
+	ImageLabel_5.BackgroundColor3 = Color3.fromRGB(255,255,255)
+	ImageLabel_5.BackgroundTransparency = 1
+	ImageLabel_5.BorderColor3 = Color3.fromRGB(0,0,0)
+	ImageLabel_5.BorderSizePixel = 0
+	ImageLabel_5.Size = UDim2.new(0, 20,0, 20)
+	ImageLabel_5.Image = "rbxassetid://99914712120545"
+	ImageLabel_5.ScaleType = Enum.ScaleType.Fit
+
+	TextLabel_3.Parent = Fragment_1
+	TextLabel_3.AutomaticSize = Enum.AutomaticSize.XY
+	TextLabel_3.BackgroundColor3 = Color3.fromRGB(255,255,255)
+	TextLabel_3.BackgroundTransparency = 1
+	TextLabel_3.BorderColor3 = Color3.fromRGB(0,0,0)
+	TextLabel_3.BorderSizePixel = 0
+	TextLabel_3.Size = UDim2.new(0, 0,0, 0)
+	TextLabel_3.Font = Enum.Font.GothamBold
+	TextLabel_3.Text = "N/A"
+	TextLabel_3.TextColor3 = Color3.fromRGB(170,117,245)
+	TextLabel_3.TextSize = 16
+	TextLabel_3.TextXAlignment = Enum.TextXAlignment.Left
+
+	UIStroke_3.Parent = TextLabel_3
+	UIStroke_3.Thickness = 1
+	
+	local Blur = Instance.new('BlurEffect', game:GetService('Lighting'))
+	Blur.Size = 24
+	
+	task.spawn(function()
+		while task.wait(1) do
+			pcall(function()
+				local GameTime = math.floor(workspace.DistributedGameTime + 0.5)
+				local Hour = math.floor(GameTime / 3600) % 24
+				local Minute = math.floor(GameTime / 60) % 60
+				local Second = GameTime % 60
+				Time_1.Text = string.format("%02d:%02d:%02d", Hour, Minute, Second)
+			end)
+		end
+	end)
+	
+	local function fmW(value)
+		local fd = tostring(value):reverse():gsub("(%d%d%d)", "%1,"):reverse()
+		if fd:sub(1,1) == "," then
+			fd = fd:sub(2)
+		end
+		return fd
+	end
+	
+	local Beli = Player.Data.Beli
+	local Fragment = Player.Data.Fragments
+	
+	TextLabel_2.Text = fmW(Beli.Value)
+	TextLabel_3.Text = fmW(Fragment.Value)
+	
+	Beli:GetPropertyChangedSignal('Value'):Connect(function()
+		TextLabel_2 = fmW(Beli.Value)
+	end)
+	
+	Fragment:GetPropertyChangedSignal('Value'):Connect(function()
+		TextLabel_3 = fmW(Fragment.Value)
+	end)
+	
+	local Click = click(Frame_2)
+	
+	tw({v = Frame_3, t = 0.25, s = Enum.EasingStyle.Back, d = "Out", g = {Position = UDim2.fromScale(1, 0.5), AnchorPoint = Vector2.new(1, 0.5)}}):Play()
+	
+	Click.MouseButton1Click:Connect(function()
+		Frame_1.Visible = not Frame_1.Visible
+		Blur.Enabled = Frame_1.Visible
+		
+		if Frame_1.Visible then
+			tw({v = Frame_3, t = 0.25, s = Enum.EasingStyle.Back, d = "Out", g = {Position = UDim2.fromScale(1, 0.5), AnchorPoint = Vector2.new(1, 0.5)}}):Play()
+			UIGradient_2.Enabled = true	
+		else
+			tw({v = Frame_3, t = 0.25, s = Enum.EasingStyle.Back, d = "Out", g = {Position = UDim2.fromScale(0, 0.5), AnchorPoint = Vector2.new(0, 0.5)}}):Play()
+			UIGradient_2.Enabled = false
+		end
+	end)
+end
